@@ -20,7 +20,7 @@
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 
-#include "Chrono.h"
+#include "ecoute.h"
 
 void  SystemClock_Config(void);
 
@@ -39,18 +39,11 @@ int main(void)
   SystemClock_Config();
 
   /* Add your application code here */
-  // Configuration chronomètre
-	Chrono_Conf(TIM3);
-	
-	// Lancement chronomètre
-	Chrono_Start(); 
-	
 
   
   /* Infinite loop */
   while (1)
   {
-	Chrono_Background();
   }
 }
 
